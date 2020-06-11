@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import express from "express";
 import routes from "../routes";
 import {
@@ -24,6 +25,6 @@ videoRouter.get(routes.editVideo(), getEditVideo);
 videoRouter.post(routes.editVideo(), postEditVideo);
 
 // Delete Video
-videoRouter.get(routes.deleteVideo, deleteVideo);
+videoRouter.get(routes.deleteVideo(), deleteVideo);
 
 export default videoRouter;
