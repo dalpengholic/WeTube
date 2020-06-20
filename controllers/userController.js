@@ -103,8 +103,12 @@ export const postFacebookLogIn = (req, res) => {
 
 
 export const logout = (req,res) => {
-    req.logout();
-    res.redirect(routes.home);
+    try{    
+        req.logout();
+        res.redirect(routes.home);
+    }catch(error){
+        console.log(error);
+    }
 };
 
 export const getMe = (req,res) => {
